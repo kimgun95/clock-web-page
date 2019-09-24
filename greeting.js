@@ -31,7 +31,7 @@ function askForName() {
 function paintGreetings(text) {
   form.classList.remove(SHOWING_CLASSNAME);
   greetings.classList.add(SHOWING_CLASSNAME);
-  greetings.innerText = `Hello ${text}`;
+  greetings.innerText = `Hello! ${text}`;
 }
 
 // constant한 '변수' currentUser는 localStorage에 저장된 요소를 getItem을 통해 USER_LOCALSOTRAGE 즉 , currentUsername의 value 값을 읽어오려는 것.
