@@ -8,18 +8,34 @@
     <title>Clock</title>
   </head>
   <body>
-    <span class="js-weather"> </span>
-    <div class="js-clock">
-      <h1>00:00</h1>
-    </div>
-    <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
-    </form>
-    <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm">
-      <input type="text" placeholder="Write down to do today!" />
-    </form>
-    <ul class="js-toDoList"></ul>
+    <header>
+      <div class="js-weather">
+        <span class="js-weatherTemp"></span>
+        <span class="js-weatherLoc"></span>
+      </div>
+    </header>
+    <main>
+      <div class="js-clock">
+        <h1>00:00</h1>
+      </div>
+      <form class="js-form form">
+        <input type="text" class="toDoInput" placeholder="What is your name?" />
+      </form>
+      <h4 class="js-greetings greetings"></h4>
+      <form class="js-toDoForm doForm">
+        <input
+          type="text"
+          class="toDoInput"
+          placeholder="Write a to do today!"
+        />
+      </form>
+      <ul class="js-toDoList"></ul>
+    </main>
+    <nav>
+      <span>
+        "부딪히는 바람도 평화롭구나. 내 마음이 변해서 더 그런가 해 - 초록빛"
+      </span>
+    </nav>
 
     <script src="clock.js"></script>
     <script src="greeting.js"></script>

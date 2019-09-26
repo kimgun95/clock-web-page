@@ -1,4 +1,5 @@
-const weather = document.querySelector(".js-weather");
+const weatherTemp = document.querySelector(".js-weatherTemp"),
+  weatherLoc = document.querySelector(".js-weatherLoc");
 
 // api는 다른 서버로 부터 손쉽게 데이터를 가지고 올 수 있는 수단 and 컴퓨터 끼리 소통하기 위해 만든 수단
 // js를 이용하여 특정 url을 호출하는 법? js는 웹사이트에 request를 보내 respond한 data를 사용
@@ -15,9 +16,17 @@ function getWeather(lat, log) {
       return response.json();
     })
     .then(function(json) {
+      console.log(json);
       const temperature = json.main.temp;
       const location = json.name;
-      weather.innerText = `${temperature}ºC | ${location}`;
+
+      weatherTemp.innerText = `${temperature}ºC`;
+      weatherLoc.innerText = `${location}`;
+
+      weatherTemp.classList.add("temperature");
+      weatherLoc.classList.add("location");
+
+      // weather.innerText = `${temperature}ºC | ${location}`;
     });
 }
 
