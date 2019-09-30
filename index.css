@@ -77,7 +77,6 @@ header {
 
 .js-clock,
 .showing,
-.js-toDoForm,
 .js-toDoList {
   display: flex;
   justify-content: center;

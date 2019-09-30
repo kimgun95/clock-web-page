@@ -1,6 +1,7 @@
 const form = document.querySelector(".js-form"),
   input = form.querySelector("input"),
-  greetings = document.querySelector(".js-greetings");
+  greetings = document.querySelector(".js-greetings"),
+  doForm = document.querySelector(".js-toDoForm");
 
 //   아래 currentUser와 showing은 단지 string일 뿐 어떤 객체나 함수를 의미하는게 아님
 const USER_LOCALSOTRAGE = "currentUser",
@@ -31,6 +32,7 @@ function askForName() {
 function paintGreetings(text) {
   form.classList.remove(SHOWING_CLASSNAME);
   greetings.classList.add(SHOWING_CLASSNAME);
+  doForm.classList.add(SHOWING_CLASSNAME);
   greetings.innerText = `Welcome! ${text}. It's a great today!`;
 }
 
